@@ -9,17 +9,17 @@ async function checkWeather()
     console.log(data);
 
     document.querySelector(".city").innerHTML =data.name;
-    document.querySelector(".temp").innerHTML =data.main.temp;
-    document.querySelector(".humidity").innerHTML =data.main.humidity;
+    document.querySelector(".temp"+"°c").innerHTML =math.random(data.main.temp);
+    document.querySelector(".humidity").innerHTML =data.main.humidity+"%";
 
-    document.querySelector(".wind").innerHTML= data.wind.speed;
+    document.querySelector(".wind").innerHTML= data.wind.speed+ "km/h";
     
    
 }
 checkWeather() 
 
 {
-// in this code there are advanced things better for upgrade 
+//  this code  for upgrade purpose 
 
 //source AI
 
@@ -54,3 +54,4 @@ checkWeather()
 // }
 
 }
+
