@@ -1,7 +1,12 @@
 const apiKey = "d6270b1dab7081cdb90310a0d2194692";
 const apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=kolhapur&appid=d6270b1dab7081cdb90310a0d2194692&units=metric`;
 
-async function checkWeather() 
+
+
+const searchBox = document.querySelector(".search input");
+const searchBtn = document.querySelector(".search button");
+
+async function checkWeather(city) 
 {
     const response = await fetch(apiUrl + `&appid=${apiKey}`);
     let data = await response.json();
@@ -16,9 +21,17 @@ async function checkWeather()
     
    
 }
-checkWeather() 
+checkWeather(click) 
 
-{
+searchBtn = addEventListener("click" ,()=>{
+checkWeather(searchBox.value) 
+
+
+
+
+})
+
+
 //  this code  for upgrade purpose 
 
 //source AI
@@ -53,5 +66,5 @@ checkWeather()
 //         });
 // }
 
-}
+
 
